@@ -29,14 +29,14 @@ class TinderStone extends Component {
 
       if(routeObject.backButton){
         return <View style={{flex:1}}>
-          <View style={{padding: 10, left: 0, top: 0}}>
+          <Component route={route} navigator={navigator}/>
+          <View style={{padding: 10, position: 'absolute', bottom : 0, left: 0, backgroundColor: 'white'}}>
             <TouchableHighlight
               overlayColor='#FFFFFF'
               onPress={() => navigator.pop()}>
                 <Icon name="arrow-left" size={50} color="black" />
             </TouchableHighlight>
           </View>
-          <Component route={route} navigator={navigator}/>
         </View>
       }else{
         return <Component route={route} navigator={navigator}/>
